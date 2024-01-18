@@ -15,7 +15,7 @@ const app = express();
 connectDB()
 
 app.use(cors({ 
-    origin: '*', 
+    origin: 'https://the-barber.onrender.com', 
     methods: 'GET,POST,PUT,PATCH,DELETE',
     allowedHeaders: ['Content-Type', 'Authorization'],
 }
