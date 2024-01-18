@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const NewUser = require('../models/User');
 
-var key = 'real secret keys should be long and random';
-var encryptor = require('simple-encryptor')(key);
+//var key = 'real secret keys should be long and random';
+const encryptor = require('simple-encryptor')(process.env.SECRET_KEY || '48b78031dc6648bacca2be5088c86abd0e3e022f9c0fc10c2f33152f6536f4f8');
 
 
 router.get('/', async (req, res) => {
